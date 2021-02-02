@@ -20,10 +20,6 @@
   border-right: 1px solid white;
 }
 
-.header__home p {
-  /* text-align: center; */
-}
-
 .header__home:hover {
   border-color: lightgray;
   transition: border-right 0.5s ease;

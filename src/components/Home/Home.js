@@ -7,7 +7,7 @@ function Home() {
       <div className="home__container">
         <button className="home__generate">Get a random task</button>
         <div className="home__currentTask">current task</div>
-        <button className="home__completeT">Complete Task</button>
+        <button className="home__complete">Complete Task</button>
       </div>
     </div>
   );

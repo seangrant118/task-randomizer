@@ -1,0 +1,24 @@
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home__container {
+  height: 300px;
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.home__generate,
+.home__complete {
+  height: 50px;
+}
+
+.home__currentTask {
+  text-align: center;
+}

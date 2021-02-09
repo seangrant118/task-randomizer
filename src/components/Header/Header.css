@@ -44,3 +44,8 @@
   transition: border-right 0.5s ease;
   transition: border-left 0.5s ease;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

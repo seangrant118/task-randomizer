@@ -28,7 +28,6 @@
 .header__right {
   display: flex;
   justify-content: right;
-  /* width: 20%; */
   justify-content: space-between;
 }
 

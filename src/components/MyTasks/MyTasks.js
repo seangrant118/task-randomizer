@@ -1,9 +1,13 @@
 import React from "react";
+import "./MyTasks.css";
 
 function MyTasks() {
   return (
-    <div>
-      <div>My tasks</div>
+    <div className="tasks">
+      <div className="tasks__container">
+        <h2 className="tasks__title">My Tasks</h2>
+        <div className="task__items"></div>
+      </div>
     </div>
   );
 }

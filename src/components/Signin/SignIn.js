@@ -1,10 +1,10 @@
 import React from "react";
+import "./SignIn.css";
 
 function SignIn() {
   return (
-    <div>
-      <div>Sign in or Sign up</div>
-      <button>Sign in With Google</button>
+    <div className="signin__container">
+      <button className="signin">Sign in With Google</button>
     </div>
   );
 }

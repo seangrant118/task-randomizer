@@ -6,8 +6,27 @@ import Home from "./components/Home/Home";
 import SignIn from "./components/Signin/SignIn";
 import CreateTask from "./components/CreateTask/CreateTask";
 import MyTasks from "./components/MyTasks/MyTasks";
+import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch({
+          type: "SET_USER",
+          user: user.email,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, []);
   return (
     <Router>
       <div className="App">

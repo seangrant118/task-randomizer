@@ -2,9 +2,18 @@ import React from "react";
 import AddIcon from "@material-ui/icons/Add";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import { auth } from "../../firebase";
 import "./Header.css";
 
 function Header() {
+  const [{ user }, dispatch] = useStateValue();
+
+  const signOut = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   return (
     <div className="header">
       <div className="header__home">
@@ -14,10 +23,17 @@ function Header() {
       </div>
       <div className="header__right">
         <Link to="/signin">
-          <div className="header__option">
-            <p className="header__signin">Sign in</p>
-            <AccountCircleIcon />
-          </div>
+          {user ? (
+            <div onClick={signOut} className="header__option">
+              <p className="header__signin">Sign out</p>
+              <AccountCircleIcon />
+            </div>
+          ) : (
+            <div className="header__option">
+              <p className="header__signin">Sign in</p>
+              <AccountCircleIcon />
+            </div>
+          )}
         </Link>
         <Link to="/createtask">
           <div className="header__option">

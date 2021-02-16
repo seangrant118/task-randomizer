@@ -15,15 +15,16 @@ function SignIn() {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        const credential = result.credential;
-        const token = credential.accessToken;
-        const user = result.user;
+        // const credential = result.credential;
+        // const token = credential.accessToken;
+        // const user = result.user;
         history.push("/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        const credential = error.credential;
+        // const credential = error.credential;
+        console.log(errorCode, errorMessage);
       });
   };
 

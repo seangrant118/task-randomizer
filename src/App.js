@@ -17,7 +17,7 @@ function App() {
       if (user) {
         dispatch({
           type: "SET_USER",
-          user: user.email,
+          user: user,
         });
       } else {
         dispatch({

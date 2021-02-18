@@ -1,8 +1,22 @@
 import React, { useState } from "react";
+import { db } from "../../firebase";
 import "./CreateTask.css";
+import { useStateValue } from "../../StateProvider";
 
 function CreateTask() {
   const [task, createTask] = useState();
+  const [{ user }, dispatch] = useStateValue();
+
+  const handleSubmit = () => {
+    db.collection("users")
+      .doc(user?.uid)
+      .collection("tasks")
+      .doc(task)
+      .set({ task: task })
+      .then(() => {
+        console.log("success!");
+      });
+  };
 
   return (
     <div className="create">
@@ -14,7 +28,9 @@ function CreateTask() {
             onChange={(e) => createTask(e.target.value)}
           />
         </div>
-        <button className="create__button">Create</button>
+        <button onClick={handleSubmit} className="create__button">
+          Create
+        </button>
       </div>
     </div>
   );

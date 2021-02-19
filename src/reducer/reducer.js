@@ -10,6 +10,12 @@ export const reducer = (state, action) => {
         user: action.user,
       };
 
+    case "ADD_TASK":
+      return {
+        ...state,
+        tasks: [...state.tasks, action.task],
+      };
+
     default:
       return state;
   }

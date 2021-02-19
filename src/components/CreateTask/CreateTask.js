@@ -7,7 +7,13 @@ function CreateTask() {
   const [task, setTask] = useState("");
   const [{ user }, dispatch] = useStateValue();
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    dispatch({
+      type: "ADD_TASK",
+      task: task,
+    });
+    setTask("");
+  };
 
   return (
     <div className="create">

@@ -17,7 +17,6 @@ function CreateTask() {
         .then(() => {
           setTask("");
           console.log("success!");
-          console.log(task);
         });
     }
   };

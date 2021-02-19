@@ -4,18 +4,22 @@ import "./CreateTask.css";
 import { useStateValue } from "../../StateProvider";
 
 function CreateTask() {
-  const [task, createTask] = useState();
+  const [task, setTask] = useState("");
   const [{ user }, dispatch] = useStateValue();
 
   const handleSubmit = () => {
-    db.collection("users")
-      .doc(user?.uid)
-      .collection("tasks")
-      .doc(task)
-      .set({ task: task })
-      .then(() => {
-        console.log("success!");
-      });
+    if (task && task !== "") {
+      db.collection("users")
+        .doc(user?.uid)
+        .collection("tasks")
+        .doc(task)
+        .set({ task: task })
+        .then(() => {
+          setTask("");
+          console.log("success!");
+          console.log(task);
+        });
+    }
   };
 
   return (
@@ -24,8 +28,9 @@ function CreateTask() {
         <div className="create__items">
           <div className="create__title">Create a new task</div>
           <textarea
+            value={task}
             className="create__input"
-            onChange={(e) => createTask(e.target.value)}
+            onChange={(e) => setTask(e.target.value)}
           />
         </div>
         <button onClick={handleSubmit} className="create__button">

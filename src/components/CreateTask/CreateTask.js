@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../../firebase";
+// import { db } from "../../firebase";
 import "./CreateTask.css";
 import { useStateValue } from "../../StateProvider";
 
@@ -7,19 +7,7 @@ function CreateTask() {
   const [task, setTask] = useState("");
   const [{ user }, dispatch] = useStateValue();
 
-  const handleSubmit = () => {
-    if (task && task !== "") {
-      db.collection("users")
-        .doc(user?.uid)
-        .collection("tasks")
-        .doc(task)
-        .set({ task: task })
-        .then(() => {
-          setTask("");
-          console.log("success!");
-        });
-    }
-  };
+  const handleSubmit = () => {};
 
   return (
     <div className="create">

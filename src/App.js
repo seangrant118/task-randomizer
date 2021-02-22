@@ -18,7 +18,6 @@ function App() {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          console.log("here");
           dispatch({
             type: "SET_TASKS",
             task: doc.id,
@@ -26,6 +25,7 @@ function App() {
         });
       });
   };
+  // requery the db every time the user changes to make sure data is current
   useEffect(() => {
     dbQuery();
   }, [user]);

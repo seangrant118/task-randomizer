@@ -10,3 +10,15 @@
   width: 500px;
   margin-top: 50px;
 }
+
+.tasks__title {
+  text-align: center;
+}
+
+.task__items {
+  margin: 10px 0;
+}
+
+.task__item {
+  margin: 10px 0;
+}

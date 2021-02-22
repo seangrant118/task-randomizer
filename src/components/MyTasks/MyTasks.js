@@ -26,9 +26,7 @@ function MyTasks() {
         <h2 className="tasks__title">My Tasks</h2>
         <div className="task__items">
           {tasks.map((task) => (
-            <div className="task__item">
-              <p>{task}</p>
-            </div>
+            <div className="task__item">{task}</div>
           ))}
         </div>
       </div>

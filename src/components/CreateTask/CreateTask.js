@@ -11,6 +11,7 @@ function CreateTask() {
     dispatch({
       type: "ADD_TASK",
       task: task,
+      user: user,
     });
     setTask("");
   };

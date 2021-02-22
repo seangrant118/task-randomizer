@@ -7,17 +7,35 @@ import SignIn from "./components/Signin/SignIn";
 import CreateTask from "./components/CreateTask/CreateTask";
 import MyTasks from "./components/MyTasks/MyTasks";
 import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase";
+import { auth, db } from "./firebase";
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
+  const dbQuery = () => {
+    db.collection("users")
+      .doc(user?.uid)
+      .collection("tasks")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log("here");
+          dispatch({
+            type: "SET_TASKS",
+            task: doc.id,
+          });
+        });
+      });
+  };
+  useEffect(() => {
+    dbQuery();
+  }, [user]);
 
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
         dispatch({
           type: "SET_USER",
-          user: user,
+          user: authUser,
         });
       } else {
         dispatch({

@@ -18,10 +18,15 @@ export const reducer = (state, action) => {
         .collection("tasks")
         .doc(action.task)
         .set({ task: action.task });
-      console.log(action.user.uid);
       return {
         ...state,
         tasks: [...state.tasks, action.task],
+      };
+
+    case "SET_TASKS":
+      return {
+        ...state,
+        tasks: [state.tasks, action.task],
       };
 
     default:

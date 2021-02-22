@@ -29,6 +29,12 @@ export const reducer = (state, action) => {
         tasks: [state.tasks, action.task],
       };
 
+    case "EMPTY_TASKS":
+      return {
+        ...state,
+        tasks: [],
+      };
+
     default:
       return state;
   }

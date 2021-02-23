@@ -1,24 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./MyTasks.css";
-import { db } from "../../firebase";
 import { useStateValue } from "../../StateProvider";
 
 function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
-
-  const dbQuery = () => {
-    let state = [];
-    db.collection("users")
-      .doc(user?.uid)
-      .collection("tasks")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          state.push(doc.id);
-        });
-        return state;
-      });
-  };
 
   return (
     <div className="tasks">

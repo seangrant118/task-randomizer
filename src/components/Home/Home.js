@@ -9,9 +9,26 @@ function Home() {
   );
 
   const generateRandomTask = () => {
-    console.log(tasks);
     let random = Math.floor(Math.random() * tasks.length);
     setCurrentTask(tasks[random]);
+  };
+
+  const checkTask = () => {
+    console.log(tasks);
+
+    const i = tasks.findIndex((task) => task === tasks[0]);
+
+    console.log(i);
+
+    let newTasks = [...tasks];
+
+    if (i >= 0) {
+      newTasks.splice(i, 1);
+    } else {
+      console.warn(`cant remove task: ${tasks[0]}`);
+    }
+
+    console.log(newTasks);
   };
   return (
     <div className="home">
@@ -20,7 +37,9 @@ function Home() {
           Get a random task
         </button>
         <div className="home__currentTask">{currentTask}</div>
-        <button className="home__complete">Complete Task</button>
+        <button className="home__complete" onClick={checkTask}>
+          Complete Task
+        </button>
       </div>
     </div>
   );

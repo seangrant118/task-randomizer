@@ -6,7 +6,6 @@ function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
 
   const deleteTask = (e) => {
-    console.log(e.target.value);
     dispatch({
       type: "DELETE_TASK",
       task: e.target.value,
@@ -19,14 +18,18 @@ function MyTasks() {
       <div className="tasks__container">
         <h2 className="tasks__title">My Tasks</h2>
         <div className="task__items">
-          {tasks.map((task) => (
-            <div key={task} className="task__item">
-              {task}
-              <button value={task} onClick={deleteTask}>
-                x
-              </button>
-            </div>
-          ))}
+          {tasks.length >= 1 ? (
+            tasks.map((task) => (
+              <div key={task} className="task__item">
+                {task}
+                <button value={task} onClick={deleteTask}>
+                  x
+                </button>
+              </div>
+            ))
+          ) : (
+            <div>No tasks to display!</div>
+          )}
         </div>
       </div>
     </div>

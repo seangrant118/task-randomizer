@@ -13,22 +13,25 @@ function Home() {
     setCurrentTask(tasks[random]);
   };
 
-  const checkTask = () => {
-    console.log(tasks);
+  const completeTask = () => {
+    // console.log(tasks);
 
-    const i = tasks.findIndex((task) => task === tasks[0]);
+    // const i = tasks.findIndex((task) => task === tasks[0]);
 
-    console.log(i);
+    // console.log(i);
 
-    let newTasks = [...tasks];
+    // let newTasks = [...tasks];
 
-    if (i >= 0) {
-      newTasks.splice(i, 1);
-    } else {
-      console.warn(`cant remove task: ${tasks[0]}`);
+    // if (i >= 0) {
+    //   newTasks.splice(i, 1);
+    // } else {
+    //   console.warn(`cant remove task: ${tasks[0]}`);
+    // }
+
+    // console.log(newTasks);
+    if (currentTask !== "Click to generate a random task") {
+      setCurrentTask(`Task completed! \n Click to generate a random task`);
     }
-
-    console.log(newTasks);
   };
   return (
     <div className="home">
@@ -37,7 +40,7 @@ function Home() {
           Get a random task
         </button>
         <div className="home__currentTask">{currentTask}</div>
-        <button className="home__complete" onClick={checkTask}>
+        <button className="home__complete" onClick={completeTask}>
           Complete Task
         </button>
       </div>

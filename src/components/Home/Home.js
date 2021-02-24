@@ -18,13 +18,18 @@ function Home() {
   };
 
   const completeTask = () => {
-    if (currentTask !== "Click to generate a random task") {
+    if (
+      currentTask !== "Click to generate a random task" &&
+      currentTask !== `You must generate a random task before completing`
+    ) {
       dispatch({
         type: "DELETE_TASK",
         task: currentTask,
         user: user,
       });
       setCurrentTask(`Task completed! \n Click to generate a random task`);
+    } else {
+      setCurrentTask(`You must generate a random task before completing`);
     }
   };
   return (

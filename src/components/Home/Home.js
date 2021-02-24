@@ -9,26 +9,15 @@ function Home() {
   );
 
   const generateRandomTask = () => {
-    let random = Math.floor(Math.random() * tasks.length);
-    setCurrentTask(tasks[random]);
+    if (tasks.length >= 1) {
+      let random = Math.floor(Math.random() * tasks.length);
+      setCurrentTask(tasks[random]);
+    } else {
+      setCurrentTask("No tasks to display! \n create some tasks!");
+    }
   };
 
   const completeTask = () => {
-    // console.log(tasks);
-
-    // const i = tasks.findIndex((task) => task === tasks[0]);
-
-    // console.log(i);
-
-    // let newTasks = [...tasks];
-
-    // if (i >= 0) {
-    //   newTasks.splice(i, 1);
-    // } else {
-    //   console.warn(`cant remove task: ${tasks[0]}`);
-    // }
-
-    // console.log(newTasks);
     if (currentTask !== "Click to generate a random task") {
       dispatch({
         type: "DELETE_TASK",

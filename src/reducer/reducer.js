@@ -36,9 +36,21 @@ export const reducer = (state, action) => {
       };
 
     case "DELETE_TASK":
-      console.log(action);
+      const i = state.tasks.findIndex((task) => task === action.task);
+      console.log(i);
+
+      let newTasks = [...state.tasks];
+
+      if (i >= 0) {
+        newTasks.splice(i, 1);
+      } else {
+        console.warn(`cannot remove ${action.task}`);
+      }
+      console.log(newTasks);
+
       return {
-        state,
+        ...state,
+        tasks: newTasks,
       };
     default:
       return state;

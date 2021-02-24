@@ -5,15 +5,24 @@ import { useStateValue } from "../../StateProvider";
 
 function CreateTask() {
   const [task, setTask] = useState("");
-  const [{ user }, dispatch] = useStateValue();
+  const [error, setError] = useState("");
+  const [{ tasks, user }, dispatch] = useStateValue();
 
   const handleSubmit = () => {
-    dispatch({
-      type: "ADD_TASK",
-      task: task,
-      user: user,
-    });
-    setTask("");
+    setError("");
+    const i = tasks.findIndex((item) => item === task);
+
+    if (i < 0) {
+      dispatch({
+        type: "ADD_TASK",
+        task: task,
+        user: user,
+      });
+      setTask("");
+      setError("task created successfully!");
+    } else {
+      setError("This task already exists!");
+    }
   };
 
   return (
@@ -30,6 +39,7 @@ function CreateTask() {
         <button onClick={handleSubmit} className="create__button">
           Create
         </button>
+        <div>{error}</div>
       </div>
     </div>
   );

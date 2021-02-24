@@ -35,6 +35,11 @@ export const reducer = (state, action) => {
         tasks: [],
       };
 
+    case "DELETE_TASK":
+      console.log(action);
+      return {
+        state,
+      };
     default:
       return state;
   }

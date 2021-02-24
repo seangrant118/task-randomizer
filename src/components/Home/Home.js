@@ -30,6 +30,11 @@ function Home() {
 
     // console.log(newTasks);
     if (currentTask !== "Click to generate a random task") {
+      dispatch({
+        type: "DELETE_TASK",
+        task: currentTask,
+        user: user,
+      });
       setCurrentTask(`Task completed! \n Click to generate a random task`);
     }
   };

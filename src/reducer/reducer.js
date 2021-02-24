@@ -36,8 +36,18 @@ export const reducer = (state, action) => {
       };
 
     case "DELETE_TASK":
+      db.collection("users")
+        .doc(action.user?.uid)
+        .collection("tasks")
+        .doc(action.task)
+        .delete()
+        .then(() => {
+          console.log(`Successfully deleted task: ${action.task}`);
+        })
+        .catch((error) => {
+          console.error(`Error removing task: ${action.task}, ${error}`);
+        });
       const i = state.tasks.findIndex((task) => task === action.task);
-      console.log(i);
 
       let newTasks = [...state.tasks];
 
@@ -46,7 +56,6 @@ export const reducer = (state, action) => {
       } else {
         console.warn(`cannot remove ${action.task}`);
       }
-      console.log(newTasks);
 
       return {
         ...state,

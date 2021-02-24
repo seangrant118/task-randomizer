@@ -36,6 +36,7 @@ export const reducer = (state, action) => {
       };
 
     case "DELETE_TASK":
+      // delete from db
       db.collection("users")
         .doc(action.user?.uid)
         .collection("tasks")
@@ -47,6 +48,9 @@ export const reducer = (state, action) => {
         .catch((error) => {
           console.error(`Error removing task: ${action.task}, ${error}`);
         });
+
+      // delete from context api state
+
       const i = state.tasks.findIndex((task) => task === action.task);
 
       let newTasks = [...state.tasks];

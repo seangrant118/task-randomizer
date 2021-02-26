@@ -8,7 +8,8 @@ function CreateTask() {
   const [error, setError] = useState("");
   const [{ tasks, user }, dispatch] = useStateValue();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setError("");
     const i = tasks.findIndex((item) => item === task);
 
@@ -29,11 +30,13 @@ function CreateTask() {
     <div className="create">
       <div className="create__container">
         <div className="create__items">
-          <textarea
-            value={task}
-            className="create__input"
-            onChange={(e) => setTask(e.target.value)}
-          />
+          <form onSubmit={handleSubmit}>
+            <input
+              value={task}
+              className="create__input"
+              onChange={(e) => setTask(e.target.value)}
+            />
+          </form>
         </div>
         <button onClick={handleSubmit} className="create__button">
           <AddIcon />

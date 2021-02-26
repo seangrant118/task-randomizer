@@ -10,6 +10,10 @@ function CreateTask() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (task === "") {
+      setError("Cannont add an empty task");
+      return;
+    }
     setError("");
     const i = tasks.findIndex((item) => item === task);
 
@@ -26,6 +30,15 @@ function CreateTask() {
     }
   };
 
+  const twoCalls = (e) => {
+    setTask(e.target.value);
+    setError("");
+  };
+
+  const removeError = () => {
+    setError("");
+  };
+
   return (
     <div className="create">
       <div className="create__container">
@@ -34,7 +47,7 @@ function CreateTask() {
             <input
               value={task}
               className="create__input"
-              onChange={(e) => setTask(e.target.value)}
+              onChange={(e) => twoCalls(e)}
               placeholder={"Enter a new task"}
             />
           </form>
@@ -42,7 +55,9 @@ function CreateTask() {
         <button onClick={handleSubmit} className="create__button">
           <AddIcon />
         </button>
-        <div>{error}</div>
+        <div onClick={removeError} className="create__error">
+          {error}
+        </div>
       </div>
     </div>
   );

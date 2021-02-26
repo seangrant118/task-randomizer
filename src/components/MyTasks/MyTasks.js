@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MyTasks.css";
 import { useStateValue } from "../../StateProvider";
 import CreateTask from "../CreateTask/CreateTask";
+import AddIcon from "@material-ui/icons/Add";
 
 function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
@@ -28,7 +29,9 @@ function MyTasks() {
       <div className="tasks__container">
         <div className="tasks__header">
           <h2 className="tasks__title">My Tasks</h2>
-          <button onClick={createNewTask}>Create Task</button>
+          <button onClick={createNewTask}>
+            <AddIcon />
+          </button>
         </div>
         {create && <CreateTask />}
 

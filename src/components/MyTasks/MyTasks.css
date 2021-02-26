@@ -22,21 +22,30 @@
 
 .tasks__header button {
   border-radius: 5px;
-  background-color: lightgray;
+  background-color: gray;
   transition: background-color 0.5s;
-  height: 50px;
-  border-right: none;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 54%;
   margin-right: 1px;
+  color: white;
 }
 
 .tasks__header button:hover {
-  background-color: gray;
+  background-color: lightgray;
   cursor: pointer;
+}
+
+.tasks__header button:focus {
+  border: none;
+  outline: none;
 }
 
 .tasks__title {
   text-align: center;
   padding-left: 5px;
+  color: white;
 }
 
 .task__items {
@@ -51,6 +60,10 @@
   position: relative;
   border: 1px solid rgba(128, 128, 128, 0.26);
   border-top: none;
+}
+
+.task__item:hover {
+  background-color: rgb(231, 230, 230);
 }
 
 .task__delete {
@@ -72,6 +85,12 @@
 
 .task__item:nth-child(even) {
   background-color: grey;
+  color: white;
+}
+
+.task__item:nth-child(even):hover {
+  background-color: rgb(112, 110, 110);
+  color: white;
 }
 
 .task__item:last-child {

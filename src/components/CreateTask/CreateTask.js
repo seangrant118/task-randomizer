@@ -35,6 +35,7 @@ function CreateTask() {
               value={task}
               className="create__input"
               onChange={(e) => setTask(e.target.value)}
+              placeholder={"Enter a new task"}
             />
           </form>
         </div>

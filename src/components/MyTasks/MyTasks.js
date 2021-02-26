@@ -22,7 +22,11 @@ function MyTasks() {
             tasks.map((task) => (
               <div key={task} className="task__item">
                 {task}
-                <button value={task} onClick={deleteTask}>
+                <button
+                  className="task__delete"
+                  value={task}
+                  onClick={deleteTask}
+                >
                   x
                 </button>
               </div>

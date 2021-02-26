@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MyTasks.css";
 import { useStateValue } from "../../StateProvider";
+import CreateTask from "../CreateTask/CreateTask";
 
 function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
+  const [create, setCreate] = useState(false);
 
   const deleteTask = (e) => {
     dispatch({
@@ -13,10 +15,19 @@ function MyTasks() {
     });
   };
 
+  const createNewTask = () => {
+    setCreate(!create);
+  };
+
   return (
     <div className="tasks">
       <div className="tasks__container">
-        <h2 className="tasks__title">My Tasks</h2>
+        <div className="tasks__header">
+          <h2 className="tasks__title">My Tasks</h2>
+          <button onClick={createNewTask}>Create Task</button>
+        </div>
+        {create && <CreateTask />}
+
         <div className="task__items">
           {tasks.length >= 1 ? (
             tasks.map((task) => (

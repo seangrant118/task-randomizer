@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MyTasks.css";
 import { useStateValue } from "../../StateProvider";
 import CreateTask from "../CreateTask/CreateTask";
@@ -6,6 +6,10 @@ import CreateTask from "../CreateTask/CreateTask";
 function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
   const [create, setCreate] = useState(false);
+
+  useEffect(() => {
+    setCreate(false);
+  }, [tasks]);
 
   const deleteTask = (e) => {
     dispatch({

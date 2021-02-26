@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { db } from "../../firebase";
+import AddIcon from "@material-ui/icons/Add";
 import "./CreateTask.css";
 import { useStateValue } from "../../StateProvider";
 
@@ -29,7 +29,6 @@ function CreateTask() {
     <div className="create">
       <div className="create__container">
         <div className="create__items">
-          <div className="create__title">Create a new task</div>
           <textarea
             value={task}
             className="create__input"
@@ -37,7 +36,7 @@ function CreateTask() {
           />
         </div>
         <button onClick={handleSubmit} className="create__button">
-          Create
+          <AddIcon />
         </button>
         <div>{error}</div>
       </div>

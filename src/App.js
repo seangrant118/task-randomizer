@@ -56,9 +56,6 @@ function App() {
           <Route path="/signin">
             <SignIn />
           </Route>
-          <Route path="/createtask">
-            <CreateTask />
-          </Route>
           <Route path="/mytasks">
             <MyTasks />
           </Route>

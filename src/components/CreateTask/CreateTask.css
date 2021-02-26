@@ -38,6 +38,7 @@
 }
 
 .create__button {
+  background-color: white;
   margin: 0;
   border: 1px solid black;
   height: 40%;

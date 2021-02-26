@@ -35,12 +35,6 @@ function Header() {
             </div>
           )}
         </Link>
-        <Link to="/createtask">
-          <div className="header__option">
-            <p className="header__addTask">Create Task</p>
-            <AddIcon />
-          </div>
-        </Link>
         <Link to="/mytasks">
           <div className="header__option">
             <p className="header__taskList">My Tasks</p>

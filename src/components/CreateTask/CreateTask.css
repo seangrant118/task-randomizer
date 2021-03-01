@@ -3,6 +3,7 @@
   height: 15%;
   /* margin-top: 20px; */
   border: 1px solid rgba(128, 128, 128, 0.26);
+  transition: height 0.5s ease-in-out;
 }
 
 .create__container {
@@ -44,7 +45,7 @@
 .create__button {
   background-color: white;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.295);
   height: 40%;
   width: 4%;
   border-radius: 5px;
@@ -60,6 +61,7 @@
 .create__button:hover {
   background-color: gray;
   cursor: pointer;
+  color: white;
 }
 
 .create__button svg {

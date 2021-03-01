@@ -24,7 +24,6 @@ function CreateTask() {
         user: user,
       });
       setTask("");
-      setError("task created successfully!");
     } else {
       setError("This task already exists!");
     }

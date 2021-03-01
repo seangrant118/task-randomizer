@@ -30,7 +30,7 @@ function MyTasks() {
         <div className="tasks__header">
           <h2 className="tasks__title">My Tasks</h2>
           <button onClick={createNewTask}>
-            <AddIcon />
+            {create ? <div>x</div> : <AddIcon />}
           </button>
         </div>
         {create && <CreateTask />}

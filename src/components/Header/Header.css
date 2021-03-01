@@ -8,6 +8,7 @@
   z-index: 100;
   border-bottom: 1px solid lightgray;
   justify-content: space-between;
+  background-color: white;
 }
 
 .header__home {

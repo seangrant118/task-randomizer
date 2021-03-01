@@ -8,3 +8,10 @@
   border-top: 1px solid lightgray;
   line-height: 100px;
 }
+
+@media (max-width: 640px) {
+  .footer {
+    height: 60px;
+    line-height: 60px;
+  }
+}

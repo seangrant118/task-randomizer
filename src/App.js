@@ -8,6 +8,7 @@ import CreateTask from "./components/CreateTask/CreateTask";
 import MyTasks from "./components/MyTasks/MyTasks";
 import { useStateValue } from "./StateProvider";
 import { auth, db } from "./firebase";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -63,6 +64,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

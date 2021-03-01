@@ -50,7 +50,9 @@ function MyTasks() {
               </div>
             ))
           ) : (
-            <div>No tasks to display!</div>
+            <div className="tasks__none">
+              No tasks to display! <br /> Click to create a new task{" "}
+            </div>
           )}
         </div>
       </div>

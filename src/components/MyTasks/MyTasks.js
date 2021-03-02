@@ -33,7 +33,15 @@ function MyTasks() {
             {create ? <div>x</div> : <AddIcon />}
           </button>
         </div>
-        {create && <CreateTask />}
+        {create ? (
+          <div className="tasks__slide tasks__slide-active">
+            <CreateTask />
+          </div>
+        ) : (
+          <div className="tasks__slide">
+            <CreateTask />
+          </div>
+        )}
 
         <div className="task__items">
           {tasks.length >= 1 ? (

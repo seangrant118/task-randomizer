@@ -130,14 +130,13 @@
 .tasks__slide {
   height: 0px;
   visibility: hidden;
-  transition: height 0.5s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 .tasks__slide-active {
   visibility: visible;
   height: 50px;
   transition: height 0.5s ease-in-out;
-  transition: visibility 0.3 ease-in-out;
 }
 
 @media (max-width: 1024px) {

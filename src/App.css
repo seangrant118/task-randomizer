@@ -6,3 +6,9 @@
   height: calc(100vh - 160px);
   position: relative;
 }
+
+@media (max-width: 640px) {
+  .App {
+    height: calc(100vh - 120px);
+  }
+}

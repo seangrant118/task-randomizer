@@ -5,11 +5,6 @@
   transition: height 0.5s ease-in-out;
 }
 
-/* .create.create-active {
-  height: 50px;
-  transition: height 0.5s ease-in-out;
-} */
-
 .create__container {
   height: 100%;
   width: 100%;

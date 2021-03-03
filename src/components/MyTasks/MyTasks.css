@@ -10,6 +10,8 @@
 }
 
 .tasks__container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 500px;
   margin-top: 50px;
@@ -62,10 +64,6 @@
   text-align: center;
   padding-left: 15px;
   color: white;
-}
-
-.task__items {
-  /* padding: 10px 0; */
 }
 
 .task__item {

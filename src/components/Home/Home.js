@@ -10,11 +10,11 @@ function Home() {
   );
   const history = useHistory();
 
-  useEffect(() => {
-    if (!user) {
-      history.push("/signin");
-    }
-  });
+  // useEffect(() => {
+  //   if (!user) {
+  //     history.push("/signin");
+  //   }
+  // });
 
   const generateRandomTask = () => {
     if (tasks.length >= 1) {

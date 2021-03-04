@@ -6,7 +6,7 @@
   overflow-y: auto;
   display: flex;
   justify-content: center;
-  background-color: rgb(235, 232, 232);
+  background-color: #ead7d7;
 }
 .home__container {
   height: -webkit-fit-content;

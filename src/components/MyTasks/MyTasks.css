@@ -22,14 +22,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: gray;
+  background-color: #6d466b;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
 .tasks__header button {
   border-radius: 5px;
-  background-color: gray;
+  background-color: #6d466b;
   transition: background-color 0.5s;
   height: 30px;
   width: 30px;
@@ -42,13 +42,14 @@
 }
 
 .tasks__header button svg {
-  padding-right: 5px;
+  padding-right: 7px;
   padding-top: 1px;
   margin-right: 2px;
+  font-size: 23px;
 }
 
 .tasks__header button:hover {
-  background-color: lightgray;
+  background-color: #b49fcc;
   cursor: pointer;
 }
 
@@ -73,9 +74,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  border: 1px solid gray;
+  border: 1px solid #6d466b;
   border-top: none;
   background-color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .task__item:hover {
@@ -95,18 +97,19 @@
 }
 
 .task__delete:hover {
-  background-color: gray;
+  background-color: #b49fcc;
+  color: white;
   cursor: pointer;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 #b49fcc63, 0 2px 4px 0 #b49fcc75;
 }
 
 .task__item:nth-child(even) {
-  background-color: grey;
+  background-color: #6d466b;
   color: white;
 }
 
 .task__item:nth-child(even):hover {
-  background-color: rgb(112, 110, 110);
+  background-color: #b49fcc;
   color: white;
 }
 

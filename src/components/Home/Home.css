@@ -49,6 +49,13 @@
   height: 200px;
   background-color: white;
   font-size: 24px;
+  padding-top: 75px;
   line-break: loose;
   vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .home {
+    width: 100%;
+  }
 }

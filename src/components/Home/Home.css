@@ -15,7 +15,7 @@
   width: 500px;
   margin-top: 100px;
   margin-bottom: 50px;
-  border: 1px solid black;
+  /* border: 1px solid gray; */
   border-radius: 5px;
 }
 
@@ -24,24 +24,32 @@
   height: 50px;
   width: 100%;
   box-sizing: border-box;
+  background-color: gray;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .home__generate {
   border: none;
   border-radius: 5px;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .home__complete {
   border: none;
   border-radius: 5px;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .home__generate:hover,
 .home__complete:hover {
-  background: gray;
-  color: white;
+  background: lightgray;
+  color: black;
+  border: 1px solid gray;
 }
 
 .home__currentTask {
@@ -52,6 +60,8 @@
   padding-top: 75px;
   line-break: loose;
   vertical-align: middle;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
 
 @media (max-width: 1024px) {

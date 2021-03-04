@@ -56,12 +56,14 @@
   text-align: center;
   height: 200px;
   background-color: white;
+  color: #6d466b;
+  font-weight: 600;
   font-size: 24px;
   padding-top: 75px;
   line-break: loose;
   vertical-align: middle;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
+  border-left: 1px solid #6d466b;
+  border-right: 1px solid #6d466b;
 }
 
 @media (max-width: 1024px) {

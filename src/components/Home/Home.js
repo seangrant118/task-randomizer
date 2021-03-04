@@ -20,6 +20,8 @@ function Home() {
     if (tasks.length >= 1) {
       let random = Math.floor(Math.random() * tasks.length);
       setCurrentTask(tasks[random]);
+    } else if (!user) {
+      setCurrentTask("Sign in to create tasks!");
     } else {
       setCurrentTask("No tasks to display! \n create some tasks!");
     }
@@ -37,6 +39,8 @@ function Home() {
         user: user,
       });
       setCurrentTask(`Task completed! \n Click to generate a random task`);
+    } else if (!user) {
+      setCurrentTask("Sign in to create tasks!");
     } else {
       setCurrentTask(`You must generate a random task before completing`);
     }

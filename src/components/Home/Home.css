@@ -6,7 +6,7 @@
   overflow-y: auto;
   display: flex;
   justify-content: center;
-  background-color: #ead7d7;
+  background-color: #ead7d74d;
 }
 .home__container {
   height: -webkit-fit-content;
@@ -24,7 +24,7 @@
   height: 50px;
   width: 100%;
   box-sizing: border-box;
-  background-color: gray;
+  background-color: #6d466b;
   color: white;
   transition: all 0.3s ease-in-out;
 }
@@ -47,9 +47,9 @@
 
 .home__generate:hover,
 .home__complete:hover {
-  background: lightgray;
-  color: black;
-  border: 1px solid gray;
+  background: #b49fcc;
+  color: white;
+  border: 1px solid #6d466b;
 }
 
 .home__currentTask {

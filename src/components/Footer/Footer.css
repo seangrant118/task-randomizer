@@ -1,13 +1,14 @@
 .footer {
   height: 100px;
   width: 100%;
-  background-color: white;
+  background-color: #412234;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   text-align: center;
   border-top: 1px solid lightgray;
   line-height: 100px;
+  color: white;
 }
 
 @media (max-width: 640px) {

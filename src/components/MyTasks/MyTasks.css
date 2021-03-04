@@ -6,7 +6,7 @@
   overflow-y: auto;
   display: flex;
   justify-content: center;
-  background-color: #ead7d74d;
+  background-color: #ead7d72d;
 }
 
 .tasks__container {
@@ -46,6 +46,7 @@
   padding-top: 1px;
   font-size: 24px;
   padding-left: 0px;
+  color: white;
 }
 
 .tasks__header button:hover {

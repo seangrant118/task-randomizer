@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./Home.css";
 import { useStateValue } from "../../StateProvider";
 
@@ -7,6 +8,13 @@ function Home() {
   const [currentTask, setCurrentTask] = useState(
     "Click to generate a random task"
   );
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!user) {
+      history.push("/signin");
+    }
+  });
 
   const generateRandomTask = () => {
     if (tasks.length >= 1) {

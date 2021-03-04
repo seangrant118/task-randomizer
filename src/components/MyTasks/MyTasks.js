@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./MyTasks.css";
 import { useStateValue } from "../../StateProvider";
 import CreateTask from "../CreateTask/CreateTask";
@@ -7,6 +8,13 @@ import AddIcon from "@material-ui/icons/Add";
 function MyTasks() {
   const [{ user, tasks }, dispatch] = useStateValue();
   const [create, setCreate] = useState(false);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!user) {
+      history.push("/signin");
+    }
+  });
 
   useEffect(() => {
     setCreate(false);

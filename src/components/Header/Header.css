@@ -8,7 +8,8 @@
   z-index: 100;
   border-bottom: 1px solid lightgray;
   justify-content: space-between;
-  background-color: white;
+  background-color: #412234;
+  box-sizing: border-box;
 }
 
 .header__home {
@@ -17,16 +18,21 @@
   font-size: larger;
   justify-content: center;
   font-weight: 800;
-  margin: 0 20px;
+  padding: 0 20px;
   border-right: 1px solid white;
 }
 
+.header__text {
+  color: white;
+}
+
 .header__home:hover {
-  border-color: lightgray;
-  transition: border-right 0.5s ease;
+  background-color: #6d466b;
+  transition: all 0.5s ease;
 }
 
 .header__right {
+  box-sizing: border-box;
   display: flex;
   justify-content: right;
   justify-content: space-between;
@@ -40,10 +46,18 @@
   border-left: 1px solid white;
 }
 
+.header__option p {
+  color: white;
+}
+
+.MuiSvgIcon-root {
+  padding-left: 2px;
+  color: white;
+}
+
 .header__option:hover {
-  border-color: lightgray;
-  transition: border-right 0.5s ease;
-  transition: border-left 0.5s ease;
+  background-color: #6d466b;
+  transition: all 0.5s ease;
 }
 
 a {

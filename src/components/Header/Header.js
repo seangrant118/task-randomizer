@@ -18,19 +18,19 @@ function Header() {
     <div className="header">
       <div className="header__home">
         <Link to="/">
-          <p>Randomize Task</p>
+          <p className="header__text">Randomize Task</p>
         </Link>
       </div>
       <div className="header__right">
         <Link to="/signin">
           {user ? (
             <div onClick={signOut} className="header__option">
-              <p className="header__signin">Sign out</p>
+              <p className="header__signin header__text">Sign out</p>
               <AccountCircleIcon />
             </div>
           ) : (
             <div className="header__option">
-              <p className="header__signin">Sign in</p>
+              <p className="header__signin header__text">Sign in</p>
               <AccountCircleIcon />
             </div>
           )}

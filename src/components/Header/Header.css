@@ -8,14 +8,14 @@
   z-index: 100;
   border-bottom: 1px solid lightgray;
   justify-content: space-between;
-  background-color: #6d466b;
+  background-color: white;
   box-sizing: border-box;
 }
 
 .header__home {
   height: 100%;
   width: 200px;
-  font-size: larger;
+  font-size: 18px;
   justify-content: center;
   font-weight: 800;
   padding: 0 20px;
@@ -23,11 +23,11 @@
 }
 
 .header__text {
-  color: white;
+  color: #6d466b;
 }
 
 .header__home:hover {
-  background-color: #b49fcc;
+  background-color: #b49fcc33;
   transition: all 0.5s ease;
 }
 
@@ -39,6 +39,7 @@
 }
 
 .header__option {
+  font-weight: 600;
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -46,16 +47,16 @@
 }
 
 .header__option p {
-  color: white;
+  color: #6d466b;
 }
 
 .MuiSvgIcon-root {
   padding-left: 2px;
-  color: white;
+  color: #6d466b;
 }
 
 .header__option:hover {
-  background-color: #b49fcc;
+  background-color: #b49fcc33;
   transition: all 0.5s ease;
 }
 

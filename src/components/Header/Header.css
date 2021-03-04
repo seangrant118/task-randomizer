@@ -8,7 +8,7 @@
   z-index: 100;
   border-bottom: 1px solid lightgray;
   justify-content: space-between;
-  background-color: #412234;
+  background-color: #6d466b;
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .header__home:hover {
-  background-color: #6d466b;
+  background-color: #b49fcc;
   transition: all 0.5s ease;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .header__option:hover {
-  background-color: #6d466b;
+  background-color: #b49fcc;
   transition: all 0.5s ease;
 }
 

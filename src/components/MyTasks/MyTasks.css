@@ -6,7 +6,7 @@
   overflow-y: auto;
   display: flex;
   justify-content: center;
-  background-color: #ead7d7;
+  background-color: #ead7d74d;
 }
 
 .tasks__container {
@@ -44,6 +44,7 @@
 .tasks__header button svg {
   padding-right: 5px;
   padding-top: 1px;
+  margin-right: 2px;
 }
 
 .tasks__header button:hover {

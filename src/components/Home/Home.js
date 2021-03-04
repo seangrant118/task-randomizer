@@ -28,7 +28,8 @@ function Home() {
   const completeTask = () => {
     if (
       currentTask !== "Click to generate a random task" &&
-      currentTask !== `You must generate a random task before completing`
+      currentTask !== `You must generate a random task before completing` &&
+      currentTask !== `No tasks to display! \n create some tasks!`
     ) {
       dispatch({
         type: "DELETE_TASK",

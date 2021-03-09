@@ -48,6 +48,17 @@
   border-right: 1px solid white;
 }
 
+.header__signin {
+  text-align: center;
+  line-height: 12px;
+}
+
+.header__small {
+  line-height: 12px;
+  font-size: 12px;
+  overflow-wrap: normal;
+}
+
 .header__option p {
   color: #6d466b;
 }
@@ -75,8 +86,11 @@ a {
 
 @media (max-width: 480px) {
   .header__home {
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 14px;
+    margin-left: 0px;
+    padding-right: 0px;
+    width: 50%;
+    justify-content: space-between;
   }
 
   .header__home a p {
@@ -90,13 +104,23 @@ a {
   .header__option {
     box-sizing: border-box;
     padding: 10px;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom: 0px;
+    padding-top: 0px;
     text-align: center;
     height: 100%;
   }
 
   .header__right {
     height: 100%;
+    width: 50%;
+  }
+
+  .header__small {
+    overflow-wrap: normal;
+    font-size: 8px;
+  }
+
+  .header__signin {
+    line-height: 10px;
   }
 }

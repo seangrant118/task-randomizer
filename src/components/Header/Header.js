@@ -25,7 +25,11 @@ function Header() {
         <Link to="/signin">
           {user ? (
             <div onClick={signOut} className="header__option">
-              <p className="header__signin header__text">Sign out</p>
+              <p className="header__signin header__text">
+                <div className="header__small">Hello {user.displayName},</div>{" "}
+                <br />
+                <div>Sign out</div>
+              </p>
               <AccountCircleIcon />
             </div>
           ) : (

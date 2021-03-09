@@ -36,6 +36,10 @@
   border: none;
 }
 
+.create__items input::placeholder {
+  color: #6d466b;
+}
+
 .create__items form {
   width: 100%;
   height: 100%;

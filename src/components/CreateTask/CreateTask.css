@@ -84,7 +84,7 @@
 
 .create__error {
   position: absolute;
+  color: #6d466b;
   bottom: 50%;
-  right: 35%;
-  text-shadow: 1px 1px rgba(255, 0, 0, 0.336);
+  right: 33%;
 }
